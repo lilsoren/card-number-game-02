@@ -1,14 +1,15 @@
 ﻿using System;
+using Unit02.CardNumGame;
 
 namespace Cse210Starter
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            // Write your code here
+            Director director = new Director();
+            director.StartGame();
         }
     }
+
 }
