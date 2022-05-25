@@ -18,9 +18,7 @@ namespace Unit02.CardNumGame
         {
             Random random = new Random();
             values.Add(random.Next(1,13));
-        }
-
-        
+        } 
     }
 }
 

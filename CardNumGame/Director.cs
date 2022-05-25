@@ -18,13 +18,16 @@ namespace Unit02.CardNumGame
            
         }
 
-
         ///Starts the game by running the main game loop
         public void StartGame()
         {
             while (isPlaying)
             {
                 KeepPlaying();
+                if (!isPlaying){
+                    Console.WriteLine("Game over. Your final score is " + totalScore);
+                    break;
+                }
                 GetHiLo();
             }
         }
@@ -41,8 +44,6 @@ namespace Unit02.CardNumGame
         {
             string userGuess;
 
-            while (isPlaying)
-            {
                 CardDeck c1 = new CardDeck();
                 c1.Draw();
                 c1.Draw();
@@ -60,10 +61,7 @@ namespace Unit02.CardNumGame
 
                 totalScore += score;
                 Console.WriteLine("Your score is " + totalScore);
-            }
-
             
-
         }
 
 
@@ -80,9 +78,5 @@ namespace Unit02.CardNumGame
             }
             return result;
         }
-
-    
     }
-   
-   
 }
